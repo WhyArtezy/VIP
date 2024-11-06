@@ -2,13 +2,8 @@ https://app.getgrass.io/register/?referralCode=jizCiYmr2jBQFZC
 
 [TELEGRAM CHANNEL](https://t.me/airdropfindervip)
 
-- Please Choose :
-- Lite 1x | Node 1.25x | Desktop 2x
-- Lite Version = Lite_NoProxy.py
-- Node Version = Node_NoProxy.py
-- Desktop Version = Desktop_NoProxy.py
-
 # How To Install !!
+1. **Clone the repository:**
 ```
 git clone https://github.com/WhyArtezy/VIP/Website/GRASS.git
 ```
