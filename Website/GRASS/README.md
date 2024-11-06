@@ -10,18 +10,19 @@ git clone https://github.com/WhyArtezy/VIP/Website/GRASS.git
 ```
 cd GRASS
 ```
+3. **Install the required dependencies :**
 ```
 pip install -r requirements.txt
 ```
-- Desktop Version 2x
+- **Desktop Version 2x**
 ```
 python3 Desktop_NoProxy.py
 ```
-- Node Version 1.25x
+- **Node Version 1.25x**
 ```
 python3 Node_NoProxy.py
 ```
-- Lite Version 1x
+- **Lite Version 1x**
 ```
 python Lite_NoProxy.py
 ```
