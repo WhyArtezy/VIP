@@ -1,4 +1,4 @@
-https://app.getgrass.io/register/?referralCode=jizCiYmr2jBQFZC
+[Register](https://app.getgrass.io/register/?referralCode=jizCiYmr2jBQFZC)
 
 [TELEGRAM CHANNEL](https://t.me/airdropfindervip)
 
