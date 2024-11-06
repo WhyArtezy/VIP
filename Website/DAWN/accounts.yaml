@@ -1,6 +1,4 @@
 accounts:
-  - email: "account1@example.com"     # Replace with actual email
-    token: "example_token_1"           # Replace with actual token
-  - email: "account2@example.com"
-    token: "example_token_2"
+  - email: "groovyairdrop@gmail.com"     # Replace with actual email
+    token: "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkJseGtPeW9QaWIwMlNzUlpGeHBaN2JlSzJOSEJBMSJ9.eyJ1c2VySWQiOiIybzlOMXpqczJScHZqUjJ2eTl3ZlBjM2VKbmIiLCJlbWFpbCI6Imdyb292eWFpcmRyb3BAZ21haWwuY29tIiwic2NvcGUiOiJVU0VSIiwiaWF0IjoxNzMwNDg1NjA2LCJuYmYiOjE3MzA0ODU2MDYsImV4cCI6MTc2MTU4OTYwNiwiYXVkIjoid3luZC11c2VycyIsImlzcyI6Imh0dHBzOi8vd3luZC5zMy5hbWF6b25hd3MuY29tL3B1YmxpYyJ9.eImd_UFhU0XywWRnH8iGHDb2f1loJ2LkwaOB6ll72z2bF8i630CgyncQfHFmn-JlAqLTvFWcwgYbkzXV0Nrs1FazGbDJZryDgN5gfH9-_CGthLuWFd9FKn8aLtmiLSgec90flUMAa5LPsorN0QZbN-VSkpIVLm65hx11lwzt02lgUarjGbdt6sEmnLfeIfPM757ru2AQONM3lQ0kPQdQzIXA7RU_9E2oo0D40_u3OIxbWglBzu95MkLXUVssDPmisDH3G5laVvE3XNpyKIRVeMw-puegGjc8syxgR6c_ewkpy6kpjwyvaSazTkKe492Xmtl1tdbzK4sdbBZoIJepRg"           # Replace with actual token
   # Add more accounts as needed
