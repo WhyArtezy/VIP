@@ -3,3 +3,8 @@
 - Lite Version = Lite_NoProxy.py
 - Node Version = Node_NoProxy.py
 - Desktop Version = Desktop_NoProxy.py
+
+# How To Install !!
+```
+git clone https://github.com/WhyArtezy/VIP/edit/main/Website/GRASS.git
+```
