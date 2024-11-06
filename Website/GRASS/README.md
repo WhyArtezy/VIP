@@ -1,3 +1,5 @@
+https://app.getgrass.io/register/?referralCode=jizCiYmr2jBQFZC
+
 - Please Choose :
 - Lite 1x | Node 1.25x | Desktop 2x
 - Lite Version = Lite_NoProxy.py
