@@ -7,4 +7,5 @@
 # How To Install !!
 ```
 git clone https://github.com/WhyArtezy/VIP/Website/GRASS.git
+cd GRASS
 ```
