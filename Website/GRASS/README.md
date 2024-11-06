@@ -14,8 +14,15 @@ cd GRASS
 ```
 pip install -r requirements.txt
 ```
-
-- Desktop Version
+- Desktop Version 2x
 ```
 python3 Desktop_NoProxy.py
+```
+- Node Version 1.25x
+```
+python3 Node_NoProxy.py
+```
+- Lite Version 1x
+```
+python Lite_NoProxy.py
 ```
