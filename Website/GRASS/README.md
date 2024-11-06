@@ -14,6 +14,7 @@ cd GRASS
 ```
 pip install -r requirements.txt
 ```
+
 - Desktop Version
 ```
 python3 Desktop_NoProxy.py
