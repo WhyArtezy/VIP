@@ -9,3 +9,6 @@
 git clone https://github.com/WhyArtezy/VIP/Website/GRASS.git
 cd GRASS
 ```
+```
+pip install -r requirements.txt
+```
