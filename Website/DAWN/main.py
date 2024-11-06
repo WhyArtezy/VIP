@@ -7,13 +7,13 @@ from requests.packages.urllib3.exceptions import InsecureRequestWarning
 
 warnings.simplefilter('ignore', InsecureRequestWarning)
 
-with open('./config.json') as f:
+with open('./config.yaml') as f:
     config = yaml.safe_load(f)
 
-with open('./accounts.txt') as f:
+with open('./accounts.yaml') as f:
     accounts_data = yaml.safe_load(f)['accounts']
 
-with open('./proxy.txt') as f:
+with open('./proxy.yaml') as f:
     proxies = yaml.safe_load(f)['proxies']
 
 api_endpoints = {
