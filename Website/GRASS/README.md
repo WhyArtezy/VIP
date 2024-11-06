@@ -6,11 +6,11 @@ https://app.getgrass.io/register/?referralCode=jizCiYmr2jBQFZC
 
 1. Clone the repository
 ```
-git clone https://github.com/WhyArtezy/VIP/Website/GRASS.git
+git clone https://github.com/WhyArtezy/VIP.git
 ```
 2. Navigate to the project directory
 ```
-cd GRASS
+cd VIP/Website/GRASS
 ```
 3. Install the required dependencies
 ```
