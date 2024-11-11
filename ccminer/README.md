@@ -1,3 +1,4 @@
+RPNN9UrtAA2fmfvo662MoXr5mtVvMuMtm1
 ```
 mkdir ccminer && cd ccminer
 wget https://raw.githubusercontent.com/Darktron/pre-compiled/generic/ccminer
