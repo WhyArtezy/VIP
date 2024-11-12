@@ -9,7 +9,7 @@ from loguru import logger
 from fake_useragent import UserAgent
 
 async def connect_to_wss(user_id):
-    user_agent = UserAgent(os='windows', platforms='pc', browsers='chrome')
+    user_agent = UserAgent(os=['windows', 'macos', 'linux'], browsers='chrome')
     random_user_agent = user_agent.random
     device_id = str(uuid.uuid4())
     logger.info(device_id)
@@ -52,7 +52,7 @@ async def connect_to_wss(user_id):
                                 "user_agent": custom_headers['User-Agent'],
                                 "timestamp": int(time.time()),
                                 "device_type": "desktop",
-                                "version": "4.28.1",
+                                "version": "4.28.2",
                             }
                         }
                         logger.debug(auth_response)
