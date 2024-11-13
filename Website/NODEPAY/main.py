@@ -27,13 +27,13 @@ def show_copyright():
     print(Fore.MAGENTA + Style.BRIGHT + banner + Style.RESET_ALL)
     
 
-PING_INTERVAL = 180
+PING_INTERVAL = 60
 RETRIES = 120
 TOKEN_FILE = 'np_tokens.txt'
 
 DOMAIN_API = {
     "SESSION": "http://18.136.143.169/api/auth/session",
-    "PING": "http://54.255.192.166/api/network/ping"
+    "PING": "https://nw.nodepay.org/api/network/ping"
 }
 
 CONNECTION_STATES = {
@@ -62,25 +62,29 @@ async def render_profile_info(proxy, token):
 
     try:
         np_session_info = load_session_info(proxy)
-    
+        
         if not proxy_auth_status.get(proxy):  
             browser_id = uuidv4()
             response = await call_api(DOMAIN_API["SESSION"], {}, proxy, token)
-            if response is None:                
+            if response is None:
+                #logger.error(f"Authentication failed for proxy {proxy}")
                 return
             valid_resp(response)
             account_info = response["data"]
+            
             if account_info.get("uid"):
-                proxy_auth_status[proxy] = True  
+                proxy_auth_status[proxy] = True
                 save_session_info(proxy, account_info)
+                logger.info(f"Authentication successful for proxy {proxy} account: {account_info}")
             else:
                 handle_logout(proxy)
                 return
         
-        await start_ping(proxy, token)
+        if proxy_auth_status[proxy]:
+            await start_ping(proxy, token)
 
     except Exception as e:
-        pass
+        logger.error(f"Error in render_profile_info for proxy {proxy}: {e}")
 
 async def call_api(url, data, proxy, token, max_retries=3):
     headers = {
@@ -117,7 +121,7 @@ async def call_api(url, data, proxy, token, max_retries=3):
 
 async def start_ping(proxy, token):
     try:
-        while True:
+        while True:            
             await ping(proxy, token)
             await asyncio.sleep(PING_INTERVAL)
     except asyncio.CancelledError:
@@ -142,13 +146,14 @@ async def ping(proxy, token):
             "timestamp": int(time.time()),
             "version": '2.2.7'
         }
-
+        logger.warning(f"Starting ping task for proxy {proxy} Data: {data}")
         response = await call_api(DOMAIN_API["PING"], data, proxy, token)
         if response["code"] == 0:
-            logger.info(f"{Fore.GREEN}Ping successful via proxy {proxy}: {response}")
+            logger.info(f"{Fore.CYAN}Ping successful via proxy {proxy}: {response}")
             RETRIES = 0
             status_connect = CONNECTION_STATES["CONNECTED"]
         else:
+            logger.error(f"{Fore.RED}Ping Failed via proxy {proxy}: {response}")
             handle_ping_fail(proxy, response)
     except Exception as e:
         
@@ -208,17 +213,16 @@ def load_tokens_from_file(filename):
 async def main():
     show_copyright()
     print("Welcome to the main program!")
-    await asyncio.sleep(3)
-
+        
     tokens = load_tokens_from_file(TOKEN_FILE)
 
     while True:
         r = requests.get("https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/all.txt", stream=True)
         if r.status_code == 200:
-            with open('all.txt', 'wb') as f:
+            with open('proxies.txt', 'wb') as f:
                 for chunk in r:
                     f.write(chunk)
-            with open('all.txt', 'r') as file:
+            with open('proxies.txt', 'r') as file:
                 all_proxies = file.read().splitlines()
                 
         for token in tokens:
