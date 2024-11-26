@@ -1,0 +1,11 @@
+{
+    "use_proxy": false,
+    "open_position": true,
+    "auto_complete_task": true,
+    "auto_play_game": true,
+    "profit_threshold": 0.4,
+    "loss_threshold": -0.9,
+    "max_game_to_play": 6,
+    "account_delay": 5,
+    "countdown_loop": 1000
+}
