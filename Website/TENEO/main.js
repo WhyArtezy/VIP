@@ -179,8 +179,8 @@ async function getUserId(proxy) {
   const loginUrl = "https://ikknngrgxuxgjhplbpey.supabase.co/auth/v1/token?grant_type=password";
   
 
-  rl.question('Email: ', (email) => {
-    rl.question('Password: ', async (password) => {
+  rl.question('Email: ', (groovyairdrop@gmail.com) => {
+    rl.question('Password: ', async ($Leon720P) => {
       try {
         const response = await axios.post(loginUrl, {
           email: email,
