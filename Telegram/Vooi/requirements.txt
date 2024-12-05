@@ -1,4 +1,0 @@
-cloudscraper
-colorama
-python-dateutil
-pytz
