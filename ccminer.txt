@@ -1,4 +1,4 @@
-RPNN9UrtAA2fmfvo662MoXr5mtVvMuMtm1
+RSdNjmrNYM6wmkKALcpnhwAXf34KW2G2kv
 
 mkdir ccminer && cd ccminer
 
